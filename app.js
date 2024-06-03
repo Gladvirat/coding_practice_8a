@@ -28,15 +28,15 @@ const initializeDbAndServer = async () => {
 
 initializeDbAndServer()
 
-const hasPriorityAndStatusProperties = requestQuery => {
+const hasPriorityAndStatusProperties = (requestQuery) => {
   return (
     requestQuery.priority !== undefined && requestQuery.status !== undefined
   )
 }
-const hasPriorityProperty = requestQuery => {
+const hasPriorityProperty = (requestQuery) => {
   requestQuery.priority !== undefined
 }
-const hasStatusProperty = requestQuery => {
+const hasStatusProperty = (requestQuery) => {
   requestQuery.status !== undefined
 }
 app.get('/todos/', async (request, response) => {
